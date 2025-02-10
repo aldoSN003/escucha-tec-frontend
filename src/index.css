@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+:root {
+  --primary-color: #0360d9;
+}
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #213547;
+  background: linear-gradient(to bottom , white, rgba(255, 255, 255, 0.75));
+
+  background-size: 100% 100%; /* Ensure the gradient does not repeat */
+  background-attachment: fixed; /* Optional: fixes the background while scrolling */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+ 
+
+  height: 100vh; /* Make sure the body takes the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+.modern-hover {
+  position: relative;
+  overflow: hidden;
+  --underline-height: 0.125rem; /* Custom height for this element */
+  --underline-color: var(--primary-color); /* Custom color for this element */
+}
+
+.modern-hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: var(--underline-height);
+  background-color: var(--underline-color);
+  transition: width 500ms ease, background-color 500ms ease;
+  transform: translateX(-50%);
+}
+
+.modern-hover:hover::before {
+  width: 100%;
+}
+
+
+.img-circle {
+  clip-path: circle(50%);
+}
+
+
+
+.slick-prev,
+.slick-next {
+  z-index: 10; /* Ensure they appear above the slides */
+  width: 40px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px; /* Make sure arrows are big enough */
+  color: white !important; /* Ensure arrows are visible */
+}
+
+.slick-prev {
+  left: -50px; /* Adjust left arrow position */
+}
+
+.slick-next {
+  right: -50px; /* Adjust right arrow position */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+
