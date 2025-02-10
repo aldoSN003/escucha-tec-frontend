@@ -1,7 +1,6 @@
 
 
 import CardCarousel from "../components/CardCarousel";
-import CarouselTest from "../components/Carousel-Test.jsx";
 function LandingPage() {
 
   return (
@@ -33,7 +32,7 @@ function LandingPage() {
       </div>
       
      <div className="p-8 mt-20 ">
-<CarouselTest/>
+<CardCarousel/>
      </div>
 
     </>

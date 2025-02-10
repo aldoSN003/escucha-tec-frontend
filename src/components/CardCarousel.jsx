@@ -87,7 +87,7 @@ function CardCarousel() {
         ]
     };
     return (
-        <div className="w-full max-w-[90%] mx-auto  p-8 "> {/* Better width control */}
+        <div className="w-full max-w-[100%] mx-auto  p-8 "> {/* Better width control */}
             <Slider {...settings}>
                 {cards.map((card, index) => (
                     <div key={index} className=""> {/* Adds spacing between slides */}
